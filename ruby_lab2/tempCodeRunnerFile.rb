@@ -1,0 +1,1 @@
+$result = $square.abs / 2
