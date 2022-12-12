@@ -1,14 +1,14 @@
-import spos.lab1.demo.Conjunction;
-
+import os.lab1.compfuncs.basic.Conjunction;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
+import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
 class CalculationProcess {
     private SocketChannel socketChannel;
-    private boolean result;
+    private Optional<Boolean> result;
     private long calculationTime;
 
     private void connectToServer(int port) throws IOException {
@@ -32,12 +32,12 @@ class CalculationProcess {
         switch (func) {
             case 'f':
             case 'F': {
-                this.result = Conjunction.funcF(x);
+                this.result = Conjunction.trialF(x);
                 break;
             }
             case 'g':
             case 'G': {
-                this.result = Conjunction.funcG(x);
+                this.result = Conjunction.trialG(x);
                 break;
             }
         }
@@ -48,7 +48,7 @@ class CalculationProcess {
 
     public void sendResult(char func) throws IOException, ExecutionException, InterruptedException {
         ByteBuffer buffer = ByteBuffer.allocate(Integer.BYTES + Long.BYTES + Character.BYTES);
-        buffer.putInt(result ? 1 : 0);
+        buffer.putInt(result.get() ? 1 : 0);
         buffer.putLong(calculationTime);
         buffer.putChar(func);
         buffer.rewind();
