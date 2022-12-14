@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Flowers>
+    <Flower xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="Flowers.xsd">
+        <visualParameters>
+            <stem_color>#FFFF00</stem_color>
+            <leaf_color>#00FF00</leaf_color>
+            <size>SMALL</size>
+        </visualParameters>
+        <growingTips>
+            <temperature>20</temperature>
+            <is_photophilous>true</is_photophilous>
+            <watering>10</watering>
+        </growingTips>
+        <multiplying>BY_SEEDS</multiplying>
+        <flowerID>2</flowerID>
+        <name>Tulip</name>
+        <soil>PODZOLIC</soil>
+        <origin>Netherlands</origin>
+    </Flower>
+    <Flower xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="Flowers.xsd">
+        <visualParameters>
+            <stem_color>#FF0000</stem_color>
+            <leaf_color>#00FF00</leaf_color>
+            <size>MEDIUM</size>
+        </visualParameters>
+        <growingTips>
+            <temperature>15</temperature>
+            <is_photophilous>true</is_photophilous>
+            <watering>10</watering>
+        </growingTips>
+        <multiplying>BY_CUTTINGS</multiplying>
+        <flowerID>1</flowerID>
+        <name>Roze</name>
+        <soil>GROUND</soil>
+        <origin>Ukraine</origin>
+    </Flower>
+</Flowers>
