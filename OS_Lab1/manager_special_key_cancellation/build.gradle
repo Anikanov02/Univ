@@ -12,6 +12,6 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile group: 'org.jboss', name: 'jdk-misc', version: '3.Final'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.jboss', name: 'jdk-misc', version: '3.Final'
 }
